@@ -3517,3 +3517,7 @@ section.main.style1 {
     padding-bottom: 3em; /* Reduce bottom padding */
 }
 
+.smaller-header {
+    font-size: 1.5em; /* Adjust the size as needed */
+    line-height: 1.3em; /* Adjust the line height as needed */
+}
