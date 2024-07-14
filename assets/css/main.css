@@ -3510,3 +3510,10 @@ input, select, textarea {
 			}
 
 	}
+
+/* Reduce padding and margin between sections */
+section.main.style1 {
+    padding-top: 3em; /* Reduce top padding */
+    padding-bottom: 3em; /* Reduce bottom padding */
+}
+
