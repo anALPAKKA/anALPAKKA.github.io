@@ -108,7 +108,46 @@
 									The model lives in a 1D water column from 0 to 100 m, with daily time steps. Phytoplankton growth is strongest at the surface and decreases linearly 
 									with depth—basically a simplified “less light, less growth” rule:
 								</p>
-									
+
+
+
+								  <div class="equation" aria-label="Depth-dependent phytoplankton growth rate">
+								    <p>
+								      <em>r</em>(<em>z</em>) = <em>r</em><sub>max</sub>
+								      &nbsp;&middot;&nbsp;
+								      (1 &minus; <em>z</em>/100)
+								    </p>
+								  </div>
+								
+								  <p>
+								    So at <strong>0 m</strong>, growth is maximal; at <strong>100 m</strong>, it drops to zero.
+								  </p>
+								
+								  <p>
+								    Biologically, the equations include:
+								  </p>
+								
+								  <ul>
+								    <li>growth and self-limitation for phytoplankton (<strong>A</strong>),</li>
+								    <li>grazing of <strong>A</strong> by herbivorous zooplankton (<strong>Z</strong>),</li>
+								    <li>predation of <strong>Z</strong> by carnivorous zooplankton (<strong>C</strong>),</li>
+								    <li>and mortality terms.</li>
+								  </ul>
+								
+								  <p>
+								    Grazing and predation follow saturating (Holling-type) functions so feeding doesn’t increase
+								    forever with prey abundance.
+								  </p>
+								
+								  <p>
+								    Numerically, the system is integrated with SciPy’s <code>solve_ivp</code>. Then comes the twist:
+								    <strong>vertical diffusion</strong> is added using a seasonally varying mixed layer depth (MLD),
+								    which sets a depth- and time-dependent diffusion coefficient
+								    <em>k</em><sub>z</sub>. In the report, diffusion is strongest near the surface and varies with an
+								    annual MLD cycle (illustrated in Fig. 2).
+								  </p>
+								</section>
+
 									<!--On the modelling side, Lotka-Volterra models of competition and predation have been analysed for nearly 100 years and it 
                                     was found that chaotic behaviour is possible if at least 4 species are involved [4]. 
                                     The model of Scheffer [5] is an evolution of the Lotka-Volterra descriptions containing three species and more biology. 
