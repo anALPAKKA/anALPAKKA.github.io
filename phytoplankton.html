@@ -41,45 +41,81 @@
                                 
                                 <header class="major">
                                 
-                                <h2>Chaotic Phytoplankton Behaviours</h2>
+                                <h2>Modelling Chaotic Phytoplankton Behaviours</h2>
                                 
                             </header>
                             
-                            <p>Phytoplankton contribute about 50 percent to the global primary production on Earth [1] and are important 
+                            <p>Phytoplankton may be tiny, but they run a huge part of the planet. Collectively, they contribute roughly 
+							   half of Earth’s primary production [1]—meaning that about every second “bite” of new organic matter produced on 
+								Earth is made by them. Because phytoplankton sit at the base of marine food webs, phytoplankton also help steer 
+								the global cycles of carbon, nitrogen, phosphorus, sulfur, and many other compounds that climate and ecosystems depend on.
+							</p>
+
+							<p>
+								In the ocean’s sunlit surface layer (the euphotic zone), phytoplankton use photosynthesis to take up carbon and build biomass. 
+								That biomass is then eaten by zooplankton, which in turn are eaten by larger organisms. But not all of this material stays near 
+								the surface. Some of it sinks—either because phytoplankton clump together and fall like “marine snow,” or because zooplankton package 
+								it into fast-sinking fecal pellets. The result is a net transfer of carbon and nutrients from the surface to deeper waters. 
+								This conveyor belt of life and sinking particles is known as the biological pump [2]. It matters because it helps regulate how much CO₂ 
+								the ocean can store away from the atmosphere.								
+							</p>
+								
+								<!--Phytoplankton contribute about 50 percent to the global primary production on Earth [1] and are important 
                                 for the biogeochemical cycles of carbon, nitrogen, phosphorus, sulfur and other compounds. 
                                 In the eutrophic zone photosynthesis leads to uptake of carbon by phytoplankton, which is grazed on by zooplankton. 
                                 Sinking of organic matter due to phytoplankton aggregation and sinking, as well as zooplankton excretion leads to a reduction 
-                                of carbon and nutrient concentrations at the surface. This process is called the biological pump [2]. 
+                                of carbon and nutrient concentrations at the surface. This process is called the biological pump [2]. -->
  </p>
           <p>Despite the importance of phytoplankton for global biogeochemical cycles and cli mate, their composition and dynamics is still poorly understood. 
               There are only few observations, and many species have not been identified or do not survive in culture. 
-              For example, recent research related to the TARA Oceans project showed a far larger diversity of eukaryotic phytoplankton than previously catalogued [3]. Figure 1 shows observations of the relative contribution of different phytoplankton to total biomass at the Santa Monica Bay station. 
+              For example, recent research related to the TARA Oceans project showed a far larger diversity of eukaryotic phytoplankton than previously catalogued [3]. 
+			 
 </p>
-                                 <div class="container">
-                            <div class="row gtr-150">
+                    <div class="container">
+                    <div class="row gtr-150">
 			    <div class="col-6 col-12-medium imp-medium">
                             <img src="images/monicabay.jpeg"; style='height: auto; width: 90%';align="left"/>
-				    <p>Fig. 1  Phytoplankton groups observed at Santa Monica Bay (source: Leinweber, A.).</p>
-                            </div>    
+				    <p>Fig. 1 Observations of the relative contribution of different phytoplankton to total biomass at the Santa Monica Bay station between 2004 – 2005
+						(source: Leinweber, A.).</p>
+                    </div>    
 				
                             <div class="col-6 col-12-medium">
-                            <p> It raises the question whether the dynamics of phytoplankton are chaotic. 
-                                     On the other hand, fluctuations like those in Fig. 1 are not observed on large spatial scales, 
-                                     where external forcings like diffusion override the internal phytoplankton dynamics. 
-</p>
+                            <p> At a single location—like the Santa Monica Bay station in Fig. 1—the relative contribution of different phytoplankton groups 
+								can swing dramatically over time. These jagged ups and downs naturally invite a provocative question: are phytoplankton dynamics chaotic—or 
+								are they simply responding to shifting conditions? On the other hand, fluctuations like those in Fig. 1 are not observed on large spatial scales, 
+                                where external forcings like diffusion override the internal phytoplankton dynamics. 
+							</p>
                             
-                            </div>
-		            </div></div> 
-                                 
-                                <p> On the modelling side, Lotka-Volterra models of competition and predation have been analysed for nearly 100 years and it 
+                    </div>
+		            </div>
+					</div> 
+
+								 <header class="major">
+                                
+                                <h3>A Simple 1-D Model</h3>
+                                
+                            </header>
+								
+                                <p> 
+								This project tackles that question with a conceptual 1-D model designed by Scheffer [5]: a three-species food web where autotrophic phytoplankton (A) grow, 
+								herbivorous zooplankton (Z) graze them, and carnivorous zooplankton (C) snack on the grazers.  
+								The model was designed specifically to explore whether strange attractors might lurk behind plankton dynamics. 
+								The fun part is the experimental setup: first you let biology run the show (no vertical mixing), then you switch on vertical diffusion—a simple stand-in 
+								for the ocean’s habit of blending neighbouring layers together—and watch whether the “internal drama” survives.
+								</p> 	
+									
+								<p>
+									The model lives in a 1D water column from 0 to 100 m, with daily time steps. Phytoplankton growth is strongest at the surface and decreases linearly 
+									with depth—basically a simplified “less light, less growth” rule:
+								</p>
+									
+									<!--On the modelling side, Lotka-Volterra models of competition and predation have been analysed for nearly 100 years and it 
                                     was found that chaotic behaviour is possible if at least 4 species are involved [4]. 
                                     The model of Scheffer [5] is an evolution of the Lotka-Volterra descriptions containing three species and more biology. 
                                     Here we will use it to analyse interactions between these species, both with and without a physical process (vertical diffusion), 
-                                    to investigate the internal behaviour of the model and whether it is overridden by the physical process. 
-</p> 
-				    <p>This article is based on Scheffer’s model [5],
-					which describes the change in concentration of autotrophic phytoplankton(A), herbivorous zooplankton(Z) and carnivorous zooplankton(C) 
-					    feeding on the herbivorous zooplankton. </p>
+                                    to investigate the internal behaviour of the model and whether it is overridden by the physical process. -->
+
+			
 				    
 				    
 				    
